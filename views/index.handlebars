@@ -1,8 +1,32 @@
 <header>
-    
+    Eat The Burger!
 </header>
+<ul>
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> not-eaten}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
+<ul>
+  {{#each burger}}
+    {{#if devoured}}
+      {{> devoured}}
+    {{/if}}
+  {{/each}}
+</ul>
 
+<h2>Add a Burger</h2>
+<form class="create-form">
 
+  <div class="form-group">
+    <label for="bn">Burger Name:</label>
+    <input type="text" id="bn" name="name">
+  </div>
 
+  <button type="submit">Add Burger</button>
+</form>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="/assets/js/index.js"></script>
