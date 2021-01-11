@@ -1,28 +1,32 @@
 <main>
     <div class = "row m-2">
-        <img src="/public/assets/burger.jpg" alt="burger" class="mx-auto">
+        <img src="public/assets/burger.jpg" alt="burger" class="mx-auto">
+    </div>
+    <header class="text-center m-3 p-5">Yummy Burgers!</header>
+    <div class="row mx-auto m-3 p-5">
+        <div class="col-8">
+            <h4>Burgers To Eat</h4>
+            <ul>
+                {{#each burger}}
+                    {{#unless devoured}}
+                        {{> not-eaten}}
+                    {{/unless}}
+                {{/each}}  
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                {{#each burger}}
+                    {{#if devoured}}
+                        {{> devoured}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
-    <header class="text-center m-3 p-5">Yummy Burgers!</header>
-
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      {{> not-eaten}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-      {{> devoured}}
-    {{/if}}
-  {{/each}}
-</ul>
-
 <h2>Add a Burger</h2>
-<form class="create-form">
+<form class="create-form mx-auto">
 
   <div class="form-group">
     <label for="bn">Burger Name:</label>
