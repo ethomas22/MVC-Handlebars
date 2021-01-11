@@ -59,7 +59,7 @@ var orm = {
       cb(result);
     });
   },
-  
+  // objColCals example: {name: "Panther", sleepy: true}
   updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
