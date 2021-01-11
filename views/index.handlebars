@@ -1,6 +1,10 @@
-<header>
-    Eat The Burger!
-</header>
+<main>
+    <div class = "row m-2">
+        <img src="/public/assets/burger.jpg" alt="burger" class="mx-auto">
+    </div>
+
+    <header class="text-center m-3 p-5">Yummy Burgers!</header>
+
 <ul>
   {{#each burger}}
     {{#unless devoured}}
@@ -27,6 +31,6 @@
 
   <button type="submit">Add Burger</button>
 </form>
-
+</main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script src="/assets/js/index.js"></script>
